@@ -26,5 +26,14 @@ if(password.length<8){
     isValid =false;
     messages.push('Password length is too short')
 }
+feedbackDiv.style.display ="block"
+if(isValid= true){
+    feedbackDiv.textContent= "Registration successful!"
+    feedbackDiv.style.color= "#28a745"
+}else{
+   const errorMessage = messages.join("<br>");
+   feedbackDiv.innerHTML=errorMessage;
+   feedbackDiv.style.color= "#dc3545";
+}
 })
 })
