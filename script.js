@@ -20,20 +20,24 @@ return;
 if(!email.includes(@)||!email.includes('.')){
     isValid=false
     messages.push("Not a valid email");
+    return;
 
 }
 if(password.length<8){
-    isValid =false;
+    isValid ===false;
     messages.push('Password length is too short')
+    return;
 }
 feedbackDiv.style.display ="block"
-if(isValid= true){
+if(isValid=== true){
     feedbackDiv.textContent= "Registration successful!"
-    feedbackDiv.style.color= "#28a745"
+    feedbackDiv.style.color= "#28a745";
+    return;
 }else{
    const errorMessage = messages.join("<br>");
    feedbackDiv.innerHTML=errorMessage;
    feedbackDiv.style.color= "#dc3545";
+   return;
 }
 })
 })
