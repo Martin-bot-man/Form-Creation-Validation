@@ -17,8 +17,8 @@ isValid=false;
 messages.push("Username must be atleast 3 characters long")
 return;
 } 
-if(!email.includes(@)||!email.includes('.')){
-    isValid=false
+if(!email.includes('@')||!email.includes('.')){
+    isValid=false;
     messages.push("Not a valid email");
     return;
 
