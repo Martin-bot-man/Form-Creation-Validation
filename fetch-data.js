@@ -4,7 +4,7 @@ async function fetchUserData(){
     try {
       const response =await fetch(apiUrl)
       console.log(response);
-      const users =await response.json(response)
+      const users =await response.json()
       console.log(users)
       dataContainer.innerHTML='';
       const userList = document.createElement("ul");
