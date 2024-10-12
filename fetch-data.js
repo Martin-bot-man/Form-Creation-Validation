@@ -5,20 +5,24 @@ async function fetchUserData(){
       const response =await fetch(apiUrl)
       console.log(response);
       const users =await response.json(response)
+      console.log(users)
       dataContainer.innerHTML='';
       const userList = document.createElement("ul");
 
-      users.forEach(function(res) {
+      users.forEach(function(user) {
 
-        const userName = res.name 
-        console.log(res.name);
+        const userName = user.name 
+        // console.log(res.name);
         const listItem =document.createElement('li');
         listItem.innerText= userName;
-        userList.append(listItem)
-        console.log(userName)
+        userList.append(listItem);
+
+        // console.log(userList)
+
 
       })
-
+console.log(userList);
+dataContainer.append(userList);
 
     } catch (error) {
         dataContainer.innerHTML='Failed to load user data.';
