@@ -22,7 +22,7 @@ async function fetchUserData(){
 
       })
 console.log(userList);
-dataContainer.append(userList);
+dataContainer.appendChild(userList);
 
     } catch (error) {
         dataContainer.innerHTML='Failed to load user data.';
